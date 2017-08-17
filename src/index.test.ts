@@ -25,6 +25,12 @@ describe("short Number ZH", () => {
     test("1200 is 1200", () => {
         expect(shortNumber(1200)).toBe("1,200");
     });
+    test("10000 is 1.0000萬", () => {
+        expect(shortNumber(10000)).toBe("1萬");
+    });
+    test("10001 is 1.0001萬", () => {
+        expect(shortNumber(10001)).toBe("1萬");
+    });
     test("12000 is 12萬", () => {
         expect(shortNumber(120000)).toBe("12萬");
     });
