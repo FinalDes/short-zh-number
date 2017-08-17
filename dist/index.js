@@ -9,8 +9,8 @@ function shortNumber(value, simplified) {
     var list = simplified === true ? unitList1 : unitList;
     for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
         var unit = list_1[_i];
-        if (editValue > 10000) {
-            editValue /= 10000;
+        if (editValue >= 10000) {
+            editValue /= 10000.0;
         }
         else if (!isNaN(editValue) && value !== null) {
             result = editValue.toLocaleString("en") + unit.trim();
