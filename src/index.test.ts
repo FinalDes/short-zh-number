@@ -7,6 +7,9 @@ describe("check invalid Number", () => {
     test("null is ''", () => {
         expect(shortNumber(null)).toBe("");
     });
+    test("'asd' is ''", () => {
+        expect(shortNumber("asd")).toBe("");
+    });
     test("NaN is ''", () => {
         expect(shortNumber(NaN)).toBe("");
     });

@@ -1,13 +1,14 @@
 const unitList = " 萬億兆京垓秭穰溝澗正載".split("");
 const unitList1 = " 万亿兆京垓秭穰沟涧正载".split("");
-export function shortNumber(value: number, simplified: boolean = false): string {
+export function shortNumber(value: number|string, simplified: boolean = false): string {
     let result: string = "";
+    let editValue = +value;
     const list = simplified === true ? unitList1 : unitList;
     for (const unit of list) {
-        if (value > 10000) {
-            value /= 10000;
-        }else if (!isNaN(value) && typeof value === "number") {
-            result = value + unit.trim();
+        if (editValue > 10000) {
+            editValue /= 10000;
+        }else if (!isNaN(editValue) && value !== null) {
+            result = editValue + unit.trim();
             break;
         }
     }
