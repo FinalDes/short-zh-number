@@ -13,7 +13,7 @@ function shortNumber(value, simplified) {
             editValue /= 10000;
         }
         else if (!isNaN(editValue) && value !== null) {
-            result = editValue + unit.trim();
+            result = editValue.toLocaleString("en") + unit.trim();
             break;
         }
     }
