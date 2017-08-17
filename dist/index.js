@@ -5,14 +5,15 @@ var unitList1 = " 万亿兆京垓秭穰沟涧正载".split("");
 function shortNumber(value, simplified) {
     if (simplified === void 0) { simplified = false; }
     var result = "";
+    var editValue = +value;
     var list = simplified === true ? unitList1 : unitList;
     for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
         var unit = list_1[_i];
-        if (value > 10000) {
-            value /= 10000;
+        if (editValue > 10000) {
+            editValue /= 10000;
         }
-        else {
-            result = value + unit.trim();
+        else if (!isNaN(editValue) && value !== null) {
+            result = editValue + unit.trim();
             break;
         }
     }

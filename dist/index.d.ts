@@ -1,1 +1,1 @@
-export declare function shortNumber(value: number, simplified?: boolean): string;
+export declare function shortNumber(value: number | string, simplified?: boolean): string;
