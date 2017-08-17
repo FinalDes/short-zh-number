@@ -8,7 +8,7 @@ export function shortNumber(value: number|string, simplified: boolean = false): 
         if (editValue > 10000) {
             editValue /= 10000;
         }else if (!isNaN(editValue) && value !== null) {
-            result = editValue + unit.trim();
+            result = editValue.toLocaleString("en") + unit.trim();
             break;
         }
     }
