@@ -6,7 +6,7 @@ export function shortNumber(value: number, simplified: boolean = false): string 
     for (const unit of list) {
         if (value > 10000) {
             value /= 10000;
-        }else {
+        }else if (!isNaN(value) && typeof value === "number") {
             result = value + unit.trim();
             break;
         }

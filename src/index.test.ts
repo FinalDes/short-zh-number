@@ -1,6 +1,21 @@
 import {shortNumber} from "./index";
 
+describe("check invalid Number", () => {
+    test("undefined is ''", () => {
+        expect(shortNumber(undefined)).toBe("");
+    });
+    test("null is ''", () => {
+        expect(shortNumber(null)).toBe("");
+    });
+    test("NaN is ''", () => {
+        expect(shortNumber(NaN)).toBe("");
+    });
+});
+
 describe("short Number ZH", () => {
+    test("0 is 0", () => {
+        expect(shortNumber(0)).toBe("0");
+    });
     test("100 is 100", () => {
         expect(shortNumber(100)).toBe("100");
     });
