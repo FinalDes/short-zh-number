@@ -1,1 +1,3 @@
 # short-zh-number [![Build Status](https://travis-ci.org/FinalDes/short-zh-number.svg?branch=master)](https://travis-ci.org/FinalDes/short-zh-number) [![Coverage Status](https://coveralls.io/repos/github/FinalDes/short-zh-number/badge.svg?branch=master)](https://coveralls.io/github/FinalDes/short-zh-number?branch=master)
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/FinalDes/short-zh-number.svg)](https://greenkeeper.io/)
