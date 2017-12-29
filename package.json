@@ -16,7 +16,7 @@
     "test:coveralls": "yarn test:coverage && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.0",
+    "@types/jest": "^22.0.0",
     "coveralls": "^3.0.0",
     "del-cli": "^1.1.0",
     "ts-jest": "^22.0.0",
