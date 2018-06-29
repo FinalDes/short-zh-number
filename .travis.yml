@@ -1,8 +1,10 @@
 dist: trusty
 language: node_js
 node_js:
-  - node
-  - lts/*
+  - "node"
+  - "lts/*"
+  - "10"
+  - "8"
   - "6"
 script:
   - yarn
