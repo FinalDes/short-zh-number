@@ -7,7 +7,7 @@ export function shortNumber(value: number|string, simplified: boolean = false): 
     for (const unit of list) {
         if (editValue >= 10000) {
             editValue /= 10000.0;
-        }else if (!isNaN(editValue) && value !== null) {
+        } else if (!isNaN(editValue) && value !== null) {
             result = editValue.toLocaleString("en") + unit.trim();
             break;
         }
