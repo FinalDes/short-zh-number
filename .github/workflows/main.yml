@@ -20,4 +20,6 @@ jobs:
       - name: check linting
         run: yarn lint
       - name: test
-        run: yarn test:coveralls
+        run: yarn test
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v1.0.1
