@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - create-workflow
       - create-workflow/*
 jobs:
   test:
