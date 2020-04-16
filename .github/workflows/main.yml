@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - create-workflow
+      - create-workflow/*
 jobs:
   test:
     runs-on: ${{matrix.os}}
