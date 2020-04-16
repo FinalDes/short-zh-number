@@ -4,13 +4,15 @@ on:
   push:
     branches:
       - master
+      - create-workflow
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: actions/setup-node
+      - name: setup node
+        uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: install packages
@@ -18,4 +20,4 @@ jobs:
       - name: check linting
         run: yarn lint
       - name: test
-        run: yarn test:coveralls
+        run: yarn test
