@@ -1,0 +1,21 @@
+name: Build and test
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: actions/setup-node
+        with:
+          node-version: 12.x
+      - name: install packages
+        run:  yarn install
+      - name: check linting
+        run: yarn lint
+      - name: test
+        run: yarn test:coveralls
