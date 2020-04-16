@@ -13,7 +13,7 @@ jobs:
         node-version: [6.x,8.x, 10.x, 12.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v1.4.1
       - name: setup node ${{matrix.node-version}}
         uses: actions/setup-node@v1
         with:
