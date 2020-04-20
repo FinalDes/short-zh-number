@@ -1,10 +1,10 @@
 # dist: trusty
 matrix:
   include:
-    # - dist: bionic
-    # - dist: xenial
+    - dist: bionic
+    - dist: xenial
     - dist: trusty
-    - dist: precise
+    # - dist: precise
 language: node_js
 node_js:
   - "node"
