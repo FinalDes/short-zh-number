@@ -1,6 +1,6 @@
-const unitList = " 萬億兆京垓秭穰溝澗正載".split("");
-const unitList1 = " 万亿兆京垓秭穰沟涧正载".split("");
 export function shortNumber(value: number|string, simplified = false): string {
+    const unitList = "萬億兆京垓秭穰溝澗正載".split("");
+    const unitList1 = "万亿兆京垓秭穰沟涧正载".split("");
     let result = "";
     let editValue = +value;
     const list = simplified === true ? unitList1 : unitList;
@@ -8,7 +8,7 @@ export function shortNumber(value: number|string, simplified = false): string {
         if (editValue >= 10000) {
             editValue /= 10000.0;
         } else if (!isNaN(editValue) && value !== null) {
-            result = editValue.toLocaleString("en") + unit.trim();
+            return result = editValue.toLocaleString("en") + unit.trim();
             break;
         }
     }

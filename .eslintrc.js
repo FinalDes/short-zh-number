@@ -100,7 +100,6 @@ module.exports = {
             "undefined"
         ],
         "id-match": "error",
-        "import/order": "error",
         "max-classes-per-file": [
             "error",
             1
@@ -141,7 +140,6 @@ module.exports = {
             "error",
             "never"
         ],
-        "prefer-arrow/prefer-arrow-functions": "error",
         "quote-props": [
             "error",
             "consistent-as-needed"
