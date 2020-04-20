@@ -17,10 +17,10 @@ jobs:
           - windows-2019
           - windows-2016
         node-version: 
-          - 8.x
-          - 10.x
-          - 12.x
           - 13.x
+          - 12.x
+          - 10.x
+          - 8.x   
     steps:
       - name: Checkout
         uses: actions/checkout@master
