@@ -2,15 +2,28 @@
 matrix:
   include:
     - dist: bionic
+      node_js:
+        - "node"
+        - "lts/*"
+        - "12"
+        - "10"
+        - "8"
     - dist: xenial
+      node_js:
+        - "node"
+        - "lts/*"
+        - "12"
+        - "10"
+        - "8"
     - dist: trusty
+      node_js:
+        - "node"
+        - "lts/*"
+        - "12"
+        - "10"
+        - "8"
     # - dist: precise
 language: node_js
-node_js:
-  - "node"
-  - "lts/*"
-  - "12"
-  - "10"
 script:
   - yarn
   - yarn lint
