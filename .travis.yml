@@ -2,27 +2,29 @@
 matrix:
   include:
     - dist: bionic
-      node_js:
-        - "node"
-        - "lts/*"
-        - "12"
-        - "10"
-        - "8"
+      node_js: "node"
     - dist: xenial
-      node_js:
-        - "node"
-        - "lts/*"
-        - "12"
-        - "10"
-        - "8"
+      node_js: "node"
     - dist: trusty
-      node_js:
-        - "node"
-        - "lts/*"
-        - "12"
-        - "10"
-        - "8"
-    # - dist: precise
+      node_js: "node"
+    - dist: bionic
+      node_js: "lts/*"
+    - dist: xenial
+      node_js: "lts/*"
+    - dist: trusty
+      node_js: "lts/*"
+    - dist: bionic
+      node_js: "10"
+    - dist: xenial
+      node_js: "10"
+    - dist: trusty
+      node_js: "10"
+    - dist: bionic
+      node_js: "8"
+    - dist: xenial
+      node_js: "8"
+    - dist: trusty
+      node_js: "8"
 language: node_js
 script:
   - yarn
