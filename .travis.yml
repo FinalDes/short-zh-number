@@ -48,21 +48,18 @@ matrix:
       node_js: node
     - os: linux
       dist: trusty
-      arch: arm64
-      node_js: node
-    - os: linux
-      dist: trusty
-      node_js: 12
-    - os: linux
-      dist: trusty
-      arch: arm64
       node_js: 12
     - os: linux
       dist: trusty
       node_js: 10
     - os: linux
-      dist: trusty
-      arch: arm64
+      dist: precise
+      node_js: node
+    - os: linux
+      dist: precise
+      node_js: 12
+    - os: linux
+      dist: precise
       node_js: 10
     # - os: windows
     #   node_js: node
