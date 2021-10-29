@@ -1,6 +1,5 @@
 name: Build and test
 
-continue-on-error: true
 on:
   pull_request:
     branches:
@@ -13,6 +12,7 @@ on:
 jobs:
   test:
     runs-on: ${{matrix.os}}
+    continue-on-error: true
     strategy:
       matrix:
         os:
