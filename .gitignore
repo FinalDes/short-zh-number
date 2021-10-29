@@ -3,4 +3,4 @@ coverage/
 npm-debug.log
 .buildcache/
 dist/
-tslint-to-eslint-config.log
+super-linter.log

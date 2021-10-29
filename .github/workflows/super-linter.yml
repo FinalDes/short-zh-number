@@ -1,0 +1,44 @@
+---
+name: Lint Code Base
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: 
+      - master
+
+permissions:
+  actions: none
+  checks:  none             #add custom pass/fail checks to the PR
+  contents: read            #git permissions to repo pull/push
+  deployments: none
+  issues: none              #read/write to repo Issues
+  packages: none            #read/write to repo Packages (ghcr, gems, npm)
+  pull-requests: none       #read/write to repo PRs
+  repository-projects: none
+  security-events: none     #read/write to repo Security tab API
+  statuses: write           #read/write to repo custom statuses and checks
+
+jobs:
+  build:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2.3.5
+        with:
+          fetch-depth: 0
+
+      - name: Lint Code Base
+        uses: github/super-linter@v4.8.1
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_EDITORCONFIG: false
+          VALIDATE_JAVASCRIPT_STANDARD: false
+          VALIDATE_TYPESCRIPT_STANDARD: false
+          VALIDATE_JSCPD: false

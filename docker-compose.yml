@@ -1,0 +1,13 @@
+services:
+  lint:
+    image: github/super-linter
+    environment:
+      RUN_LOCAL: true
+      VALIDATE_EDITORCONFIG: false
+      VALIDATE_JAVASCRIPT_STANDARD: false
+      VALIDATE_TYPESCRIPT_STANDARD: false
+      VALIDATE_JSCPD: false
+    volumes:
+      - type: bind
+        source: .
+        target: /tmp/lint
